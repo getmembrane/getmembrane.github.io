@@ -62,9 +62,9 @@
   @include flexbox();
   @include align-items(center);
   @include justify-content(center);
-  background-image: url('/assets/images/background.jpeg');
-  background-position: bottom;
+  background-image: url('/assets/images/night_sky.jpg');
   background-size: cover;
+  background-position-y: -10vh;
   border-bottom: 3px solid $color-heroBorder;
   height: 60vh;
 }
@@ -114,9 +114,40 @@
   @include flexbox();
   width: 100%;
 }
+.section--description {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    background-color: #FFF;
+    min-height: 30vh;
+}
 .section--usps {
-  background-color: $color-white;
-  min-height: 30vh;
+    background: url('/assets/images/section_features.jpg');
+    background-size: cover;
+    background-color: $color-white;
+    min-height: 100vh;
+}
+
+//Forms
+.form {
+    @include flexbox();
+    @include justify-content(center);
+}
+.form_input {
+	@include box-shadow(0,0, 2px, $color-formInputShadow, false);
+	@include rounded();
+	border: 1px solid $color-formInputBorder;
+	font-size: $fontSize-x5;
+	outline: none;
+	padding: 10px;
+	text-decoration: none;
+    min-width: 15em;
+}
+.form_submit {
+    @include raisedButton($color-mantis,$color-textSecondary);
+    background: $color-mantis;
+    border: 1px solid $color-mantis;
+    padding: 10px 30px;
 }
 
 //Usps
@@ -132,9 +163,8 @@
 }
 .usp_container {
   @include flexbox();
-  @include flex-direction(row);
-  @include align-items(flex-start);
-  @include justify-content(space-between);
+  @include flex-direction(column);
+  @include align-items(flex-end);
 
   @media(min-width: $screen-lg) {
     width: $screen-lg;
@@ -156,6 +186,7 @@
 }
 .usp_headline {
 	@extend .headlineLarge;
+    margin-bottom: 0.2em;
 }
 .usp_content {
 	text-align: center;

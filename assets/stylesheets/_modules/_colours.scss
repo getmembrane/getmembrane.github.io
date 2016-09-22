@@ -12,6 +12,7 @@ $color-monza: 		#d60f0f;
 
 //Greys
 $color-woodsmoke:		#131516;
+$color-grey30:			rgba(0,0,0,0.30);
 
 //Greens
 $color-mantis:  #82BF56;
@@ -32,6 +33,9 @@ $color-link:				  $color-woodsmoke; //The old LoVe HAte rule. Look it up kids
 $color-linkVisited:		darken($color-woodsmoke,10%);
 $color-linkHover:			$color-woodsmoke;
 $color-linkActive:		$color-woodsmoke;
+
+$color-formInputBorder:		$color-grey30;
+$color-formInputShadow:		$color-grey30;
 
 $color-uspBackground: $color-aquaHaze;
 $color-how:           $color-mantis;
