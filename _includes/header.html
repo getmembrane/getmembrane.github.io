@@ -1,0 +1,22 @@
+<header class="header col-xs">
+  <div class="inner inner--header">
+    <a class="logo" href="/">crowd<span class="logo_accent">screen</span></a>
+    <nav class="mainNavigation">
+      <ul class="mainNavigation_list">
+        {% for link in site.navigation %}
+          {% assign current = nil %}
+          {% assign link_url = link.url %}
+          {% if page.url == link.url or page.url == link.full_url or page.layout == link.layout %}
+            {% assign current = 'is-current' %}
+          {% endif %}
+          {% if link.url == '/index.html' %}
+            {% assign link_url = '/'%}
+          {% endif %}
+
+          <li class="mainNavigation_item {{ current }}"><a class="mainNavigation_link" href="{{ link_url }}">{{ link.text }}</a></li>
+
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

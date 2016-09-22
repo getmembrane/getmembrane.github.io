@@ -1,0 +1,135 @@
+//Font family
+$fontFamily-default: 'Roboto Condensed', sans-serif;
+$fontFamily-secondary: 'Roboto', sans-serif;
+
+//Font size
+/* Fontsizes */
+$fontSize-x2: 12px;
+$fontSize-x3: 14px;
+$fontSize-x4: 16px;
+$fontSize-x5: 18px;
+$fontSize-x6: 24px;
+$fontSize-x7: 32px;
+$fontSize-x8: 48px;
+$fontSize-x9: 68px;
+$fontSize-x10: 80px;
+
+
+/* Line heights */
+$lineHeight-base: 1.5;
+$lineHeight-headline: 1.2;
+
+/* Fontweights */
+$fontWeight-light: 	300;
+$fontWeight-normal: 400;
+$fontWeight-medium: 500;
+$fontWeight-bold: 700;
+
+.font-text {
+	font-family: $fontFamily-secondary;
+	font-size: $fontSize-x5;
+	font-weight: $fontWeight-light;
+	line-height: $lineHeight-base;
+}
+.font-emptyState {
+    font-family: $fontFamily-secondary;
+    font-size: $fontSize-x7;
+    font-weight: $fontWeight-normal;
+    line-height: $lineHeight-base;
+}
+
+strong {
+	font-weight: $fontWeight-bold;
+}
+
+.headline_common {
+	font-family: $fontFamily-default;
+	line-height: 1.2;
+}
+
+.headlineLargest
+{
+	@extend .headline_common;
+	font-size: 32px;
+
+	@media(min-width: 381px)
+	{
+		font-size: 10vw;
+	}
+
+	@media(min-width: 900px)
+	{
+		font-size: 64px;
+	}
+}
+
+.headlineLarge
+{
+	@extend .headline_common;
+	font-size: 24px;
+
+	@media(min-width: 380px)
+	{
+		font-size: 7vw;
+	}
+
+	@media(min-width: 580px)
+	{
+		font-size: 40px;
+	}
+}
+.headlineMedium
+{
+	@extend .headline_common;
+	font-size: 20px;
+    line-height: 1.4;
+
+	@media(min-width: 380px)
+	{
+		font-size: 5vw;
+	}
+	@media(min-width: 580px)
+	{
+		font-size: 30px;
+	}
+
+}
+.responsiveSmall {
+    font-size: 16px;
+
+	@media(min-width: 380px)
+	{
+		font-size: 4.2vw;
+	}
+	@media(min-width: 580px)
+	{
+		font-size: 25px;
+	}
+}
+.headlineSmall
+{
+	@extend .headline_common;
+    @extend .responsiveSmall;
+}
+
+.responsiveMinor {
+    font-size: $fontSize-x2;
+
+	@media(min-width: 380px)
+	{
+		font-size: 4vw;
+	}
+	@media(min-width: 580px)
+	{
+        font-size: $fontSize-x4;
+	}
+}
+
+p {
+	line-height: 1.4;
+	margin-bottom: 1.5em;
+}
+
+b {
+    font-weight: $fontWeight-bold;
+}

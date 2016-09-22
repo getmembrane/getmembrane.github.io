@@ -1,0 +1,31 @@
+# Site settings
+title: crowdscreen
+email: info@crowdscreen.com
+description: > # Read up on crowdscreen.
+baseurl: "" # the sub-path of your site, e.g. /blog/
+url: "http://crowdscreen.github.io" # the base host-name & protocol for your site
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+sass:
+    sass_dir: assets/stylesheets
+assets:
+  sources:
+    - assets
+    - assets/images
+    - assets/stylesheets
+
+navigation:
+- text: Why Crowdscreen
+  url: /index.html#why
+- text: Product
+  url: /index.html#product
+- text: About
+  url: /about
+  full_url: /index.html#about
+- text: Contact
+  url: /contact
+  full_url: /index.html#contact

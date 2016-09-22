@@ -1,0 +1,39 @@
+/* Use this to generate names
+ * http://chir.ag/projects/name-that-color/
+ */
+$color-white: #FFF;
+$color-black: #000;
+
+//Blues
+$color-aquaHaze:		#F0F4F6;
+
+//Red
+$color-monza: 		#d60f0f;
+
+//Greys
+$color-woodsmoke:		#131516;
+
+//Greens
+$color-mantis:  #82BF56;
+
+
+// --- USAGE OF COLORS ------
+$color-pageBg:				    $color-aquaHaze;
+$color-headerBackground:  rgba(255,255,255,0.8);
+
+$color-heroBorder:      $color-mantis;
+
+$color-text:				    $color-woodsmoke;
+$color-textSecondary:		$color-white;
+
+$color-logo:            $color-black;
+
+$color-link:				  $color-woodsmoke; //The old LoVe HAte rule. Look it up kids
+$color-linkVisited:		darken($color-woodsmoke,10%);
+$color-linkHover:			$color-woodsmoke;
+$color-linkActive:		$color-woodsmoke;
+
+$color-uspBackground: $color-aquaHaze;
+$color-how:           $color-mantis;
+
+$color-footerHeart:			$color-monza;

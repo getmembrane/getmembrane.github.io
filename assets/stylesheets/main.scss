@@ -1,0 +1,171 @@
+---
+# Main sass file
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "_modules/reset",
+        "_modules/constants",
+        "_modules/mixins",
+        "_modules/typography",
+        "_modules/_zindex",
+        "_modules/colours",
+        "_modules/flexboxgrid";
+* {
+	@include box-sizing();
+}
+.body {
+  @include flexbox();
+  @include flex-direction(column);
+  min-height: 100vh;
+  position: relative;
+	@extend .font-text;
+  background-color: $color-pageBg;
+}
+.inner {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+    min-width: calc(100vw - 30px);
+}
+.flex_filler {
+  display: flex;
+  flex-grow: 1;
+}
+.header {
+  @include flexbox();
+  @include align-items(center);
+  background-color: $color-headerBackground;
+  align-items: center;
+  height: 60px;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: $zIndex-1;
+}
+.inner--header {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+.logo {
+  @extend .font-text;
+  color: $color-logo;
+  text-decoration: none;
+}
+.logo_accent {
+  font-weight: $fontWeight-bold;
+}
+.hero {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  background-image: url('/assets/images/background.jpeg');
+  background-position: bottom;
+  background-size: cover;
+  border-bottom: 3px solid $color-heroBorder;
+  height: 60vh;
+}
+.hero_headline {
+	@extend .headlineLargest;
+	@include textShadow();
+	color: $color-textSecondary;
+	text-align: center;
+    padding: 0 15px 0.3em 15px;
+}
+.hero_subheading {
+    @extend .headlineMedium;
+    @include textShadow();
+    color: $color-textSecondary;
+    padding: 0 15px 0.3em 15px;
+    text-align: center;
+}
+
+//Main navigation
+.mainNavigation {
+  @extend .font-text;
+  display: flex;
+}
+.mainNavigation_list {
+	@include flexbox();
+	@include justify-content(right);
+}
+.mainNavigation_item {
+    @include flexbox();
+}
+.mainNavigation_link {
+	color: $color-link;
+	padding: 10px;
+	text-decoration: none;
+
+	&:hover {
+		@include rounded(2px);
+		background-color: rgba($color-link,0.1);
+	}
+}
+
+.page_headline {
+
+}
+
+.section {
+  @include flexbox();
+  width: 100%;
+}
+.section--usps {
+  background-color: $color-white;
+  min-height: 30vh;
+}
+
+//Usps
+.inner--usps {
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  padding: 30px 0;
+}
+.presentation_description {
+	font-size: $fontSize-x6;
+	max-width: 33em;
+}
+.usp_container {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(flex-start);
+  @include justify-content(space-between);
+
+  @media(min-width: $screen-lg) {
+    width: $screen-lg;
+  }
+}
+.usp {
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
+  @include justify-content(flex-start);
+  margin: 0 7.5px;
+	padding: 2em 0 0 0;
+	width: 280px;
+}
+.usp_symbol {
+  display: none;
+	font-size: $fontSize-x9;
+  margin-bottom: 15px;
+}
+.usp_headline {
+	@extend .headlineLarge;
+}
+.usp_content {
+	text-align: center;
+}
+//Footer
+.footer {
+	color: $color-text;
+	padding: 2em;
+	text-align: center;
+}
+.footer_heart {
+	color: $color-footerHeart;
+}
