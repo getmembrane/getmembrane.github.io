@@ -25,7 +25,18 @@
 .inner {
     width: calc(100vw - 30px);
     margin: 0 auto;
-    min-width: calc(100vw - 30px);
+
+    @media(min-width: 600px)
+    {
+        width: calc(100% - 30px);
+        min-width: 0;
+        max-width: calc(100% - 30px);
+    }
+    @media(min-width: $screen-lg)
+    {
+        width: calc(#{$screen-lg} - 30px);
+        max-width: calc(#{$screen-lg} - 30px);
+    }
 }
 .flex_filler {
   display: flex;
@@ -62,7 +73,7 @@
   @include flexbox();
   @include align-items(center);
   @include justify-content(center);
-  background-image: url('/assets/images/night_sky.jpg');
+  background-image: url('/assets/images/background_hero.jpg');
   background-size: cover;
   background-position-y: bottom;
   border-bottom: 3px solid $color-heroBorder;
@@ -130,10 +141,6 @@
   background-color: $color-techBackground;
   min-height: 40vh;
 }
-.section--testimonials {
-  background-color: $color-testimonialsBackground;
-  min-height: 40vh;
-}
 
 //Forms
 .form {
@@ -178,14 +185,13 @@
   @include align-items(flex-start);
 
   @media(min-width: $screen-lg) {
-    width: 40vw;
+    //width: 40vw;
   }
 }
 .usp {
 	@include flexbox();
 	@include flex-direction(column);
 	@include align-items(flex-start);
-  margin: 0 7.5px;
 	padding: 2em 0 0 0;
 	width: 280px;
 }
@@ -200,17 +206,76 @@
 }
 
 //Tech
+.tech {
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    padding: 30px 0;
+}
 .tech_headline {
   @extend .headlineLarge;
   margin-bottom: 0.2rem;
 }
-.tech_list {
-    @extend .font-text;
-    font-size: $fontSize-x6;
-    list-style: decimal;
-    margin-left: 1em;
+.tech_text {
+    max-width: 33em;
+}
+.tech_partners {
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex-wrap(wrap);
+    width: 280px;
+}
+.tech_partner {
+    @include transitionDuration(0.2s);
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 15px 0;
+    max-height: 100px;
+    max-width: 100px;
+
+    &:hover {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+    }
 }
 
+.prices {
+    @include flexbox();
+    @include justify-content(space-between);
+}
+.price {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    padding: 30px 0;
+    width: 250px;
+}
+.price_title {
+    font-family: $fontFamily-default;
+    text-align: center;
+    width: 100%;
+}
+.price_title--free {
+    border-bottom: 2px solid $color-priceFreeBorder;
+}
+.price_title--small {
+    border-bottom: 5px solid $color-priceSmallBorder;
+}
+.price_title--business {
+    border-bottom: 2px solid $color-priceBusinessBorder;
+}
+.price_option {
+    font-size: $fontSize-x7;
+    margin: 15px 0;
+    text-align: center;
+}
+.price_period {
+    font-size: $fontSize-x4;
+}
+.price_features {
+    font-size: $fontSize-x4;
+    list-style: disc;
+}
 
 //Footer
 .footer {

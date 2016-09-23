@@ -6,12 +6,14 @@ $color-black: #000;
 
 //Blues
 $color-aquaHaze:		#F0F4F6;
+$color-dodgerBlue:      #4b9cff;
 
 //Red
 $color-monza: 		#d60f0f;
 
 //Greys
 $color-woodsmoke:		#131516;
+$color-regentGray:      #848fa8;
 $color-grey30:			rgba(0,0,0,0.30);
 
 //Greens
@@ -19,29 +21,31 @@ $color-mantis:  #82BF56;
 
 
 // --- USAGE OF COLORS ------
-$color-pageBg:				    $color-aquaHaze;
-$color-headerBackground:  rgba(255,255,255,0.8);
+$color-pageBg:				$color-aquaHaze;
+$color-headerBackground:    rgba(255,255,255,0.8);
 
-$color-heroBorder:      $color-mantis;
+$color-heroBorder:          $color-mantis;
 
-$color-text:				    $color-woodsmoke;
+$color-text:				$color-woodsmoke;
 $color-textSecondary:		$color-white;
 
-$color-logo:            $color-black;
+$color-logo:                $color-black;
 
-$color-link:				  $color-woodsmoke; //The old LoVe HAte rule. Look it up kids
-$color-linkVisited:		darken($color-woodsmoke,10%);
+$color-link:			    $color-woodsmoke; //The old LoVe HAte rule. Look it up kids
+$color-linkVisited:		    darken($color-woodsmoke,10%);
 $color-linkHover:			$color-woodsmoke;
-$color-linkActive:		$color-woodsmoke;
+$color-linkActive:		    $color-woodsmoke;
 
 $color-formInputBorder:		$color-grey30;
 $color-formInputShadow:		$color-grey30;
 
-$color-uspBackground: $color-aquaHaze;
-$color-how:           $color-mantis;
+$color-uspBackground:       $color-aquaHaze;
+$color-how:                 $color-mantis;
 
-$color-techBackground: $color-white;
+$color-techBackground:      $color-white;
 
-$color-testimonialsBackground:  $color-aquaHaze;
+$color-priceFreeBorder:     $color-regentGray;
+$color-priceSmallBorder:    $color-mantis;
+$color-priceBusinessBorder: $color-dodgerBlue;
 
 $color-footerHeart:			$color-monza;
