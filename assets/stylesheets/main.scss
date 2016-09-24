@@ -47,13 +47,17 @@
   @include align-items(center);
   background-color: $color-headerBackground;
   align-items: center;
-  height: 60px;
+  height: 45px;
   justify-content: space-between;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
   z-index: $zIndex-1;
+
+  @media(min-width: $screen-md) {
+      height: 60px;
+  }
 }
 .inner--header {
   @include flexbox();
@@ -77,7 +81,13 @@
   background-size: cover;
   background-position-y: bottom;
   border-bottom: 3px solid $color-heroBorder;
-  height: 60vh;
+  height: 65vh;
+  min-height: 310px;
+  padding: 45px 0 30px 0;
+
+  @media(min-width: $screen-md) {
+      padding: 75px 0 30px 0;
+  }
 }
 .hero_headline {
 	@extend .headlineLargest;
@@ -97,7 +107,11 @@
 //Main navigation
 .mainNavigation {
   @extend .font-text;
-  display: flex;
+  display: none;
+
+  @media(min-width: $screen-md) {
+      display: flex;
+  }
 }
 .mainNavigation_list {
 	@include flexbox();
@@ -117,25 +131,20 @@
 	}
 }
 
-.page_headline {
-
-}
-
 .section {
   @include flexbox();
   width: 100%;
 }
 .section--description {
-    @include flexbox();
-    @include align-items(center);
-    @include justify-content(center);
-    background-color: #FFF;
-    min-height: 30vh;
+    background-color: $color-sectionBackground;
 }
 .section--usps {
-    background: url('/assets/images/section_features.jpg');
+    background-color: $color-aquaHaze;
     background-size: cover;
-    background-color: $color-white;
+
+    @media(min-width: 900px) {
+        background: url('/assets/images/section_features.jpg');
+    }
 }
 .section--tech {
   background-color: $color-techBackground;
@@ -145,7 +154,13 @@
 //Forms
 .form {
     @include flexbox();
+    @include flex-direction(column);
     @include justify-content(center);
+    padding: 15px;
+
+    @media(min-width: 450px) {
+        @include flex-direction(row);
+    }
 }
 .form_input {
 	@include box-shadow(0,0, 2px, $color-formInputShadow, false);
@@ -155,7 +170,10 @@
 	outline: none;
 	padding: 10px;
 	text-decoration: none;
-    min-width: 15em;
+
+    @media(min-width: 450px) {
+        min-width: 15em;
+    }
 }
 .form_submit {
     @include raisedButton($color-mantis,$color-textSecondary);
@@ -164,28 +182,34 @@
     padding: 10px 30px;
 }
 
-//Usps
-.inner--usps {
-  @include flexbox();
-  @include flex-direction(row);
-  @include justify-content(flex-end);
-  padding: 30px 0;
+//Presentation
+.description {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    min-height: 30vh;
+    padding: 30px 0;
 }
-.presentation_description {
+.description_text {
 	font-size: $fontSize-x6;
+    margin-bottom: 0;
 	max-width: 33em;
 }
-.usp_filler {
-  @include flexbox();
-  @include flex-basis(2);
-}
+
+//USP
 .usp_container {
   @include flexbox();
-  @include flex-direction(column);
-  @include align-items(flex-start);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(space-between);
+  padding: 0 0 30px 0;
+  width: 100%;
 
-  @media(min-width: $screen-lg) {
-    //width: 40vw;
+  @media(min-width: 900px) {
+      @include align-items(flex-end);
+      @include flex-direction(column);
+      padding-right: 30px;
   }
 }
 .usp {
@@ -204,13 +228,20 @@
 	@extend .headlineLarge;
     margin-bottom: 0.2em;
 }
+.usp_text {
+    margin: 0;
+}
 
 //Tech
 .tech {
     @include flexbox();
-    @include flex-direction(row);
+    @include flex-direction(column);
     @include justify-content(space-between);
     padding: 30px 0;
+
+    @media(min-width: 800px) {
+        @include flex-direction(row);
+    }
 }
 .tech_headline {
   @extend .headlineLarge;
@@ -221,9 +252,15 @@
 }
 .tech_partners {
     @include flexbox();
-    @include flex-direction(column);
+    @include flex-direction(row);
     @include flex-wrap(wrap);
-    width: 280px;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    @media(min-width: 800px) {
+        @include flex-direction(column);
+        width: 280px;
+    }
 }
 .tech_partner {
     @include transitionDuration(0.2s);
@@ -241,7 +278,14 @@
 
 .prices {
     @include flexbox();
-    @include justify-content(space-between);
+    @include flex-direction(column);
+    @include align-items(center);
+
+    @media(min-width: 800px) {
+        @include flex-direction(row);
+        @include align-items(flex-start);
+        @include justify-content(space-between);
+    }
 }
 .price {
     @include flexbox();
@@ -275,6 +319,19 @@
 .price_features {
     font-size: $fontSize-x4;
     list-style: disc;
+}
+
+//FAQ
+.faq {
+    @include flexbox();
+    @include flex-wrap(wrap);
+}
+.faq_question {
+    font-size: $fontSize-x5;
+    font-weight: $fontWeight-bold;
+}
+.faq_answer {
+
 }
 
 //Footer

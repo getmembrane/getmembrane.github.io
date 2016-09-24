@@ -14,6 +14,7 @@ $color-monza: 		#d60f0f;
 //Greys
 $color-woodsmoke:		#131516;
 $color-regentGray:      #848fa8;
+$color-gallery:         #F0F0F0;
 $color-grey30:			rgba(0,0,0,0.30);
 
 //Greens
@@ -22,6 +23,8 @@ $color-mantis:  #82BF56;
 
 // --- USAGE OF COLORS ------
 $color-pageBg:				$color-aquaHaze;
+$color-sectionBackground:   $color-white;
+$color-sectionBorder:       $color-gallery;
 $color-headerBackground:    rgba(255,255,255,0.8);
 
 $color-heroBorder:          $color-mantis;

@@ -19,13 +19,5 @@ assets:
     - assets/stylesheets
 
 navigation:
-- text: Why Crowdscreen
-  url: /index.html#why
-- text: Product
-  url: /index.html#product
-- text: About
-  url: /about
-  full_url: /index.html#about
-- text: Contact
-  url: /contact
-  full_url: /index.html#contact
+- text: Pricing
+  url: /#pricing
