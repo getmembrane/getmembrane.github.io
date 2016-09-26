@@ -209,7 +209,6 @@
   @media(min-width: 900px) {
       @include align-items(flex-end);
       @include flex-direction(column);
-      padding-right: 30px;
   }
 }
 .usp {
@@ -260,6 +259,10 @@
     @media(min-width: 800px) {
         @include flex-direction(column);
         width: 280px;
+    }
+
+    @media(min-width: 970px) {
+        @include align-items(flex-start);
     }
 }
 .tech_partner {
