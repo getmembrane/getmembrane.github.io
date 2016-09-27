@@ -327,8 +327,31 @@
 
 //FAQ
 .faq {
+  background-color: $color-sectionBackground;
+}
+.faq_inner {
     @include flexbox();
     @include flex-wrap(wrap);
+    @include flex-direction(column);
+    padding: 30px 0;
+}
+.faq_container {
+    @include flexbox();
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    columns: 2;
+    margin-top: 2em;
+
+    @media(min-width: 900px) {
+      @include justify-content(space-between);
+    }
+}
+.faq_item {
+    max-width: 430px;
+}
+.faq_headline {
+    @extend .headlineLarge;
+    text-align: center;
 }
 .faq_question {
     font-size: $fontSize-x5;
@@ -340,6 +363,7 @@
 
 //Footer
 .footer {
+  background-color: $color-sectionBackground;
 	color: $color-text;
 	padding: 2em;
 	text-align: center;
