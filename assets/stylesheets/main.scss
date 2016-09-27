@@ -141,9 +141,10 @@
 .section--usps {
     background-color: $color-aquaHaze;
     background-size: cover;
+    background-repeat: no-repeat;
 
     @media(min-width: 900px) {
-        background: url('/assets/images/section_features.jpg');
+        background-image: url('/assets/images/section_features.jpg');
     }
 }
 .section--tech {
