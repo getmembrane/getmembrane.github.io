@@ -68,10 +68,8 @@
 .logo {
   @extend .font-text;
   color: $color-logo;
-  text-decoration: none;
-}
-.logo_accent {
   font-weight: $fontWeight-bold;
+  text-decoration: none;
 }
 .hero {
   @include flexbox();

@@ -1,9 +1,9 @@
 # Site settings
-title: crowdscreen
-email: info@crowdscreen.com
-description: > # Read up on crowdscreen.
+title: membrane - comments without haters
+email: info@getmembrane.com
+description: > # membrane - your knight in shining armour against haters.
 baseurl: "" # the sub-path of your site, e.g. /blog/
-url: "https://kristofferdarj.github.io/crowdscreen.github.io" # the base host-name & protocol for your site
+url: "https://kristofferdarj.github.io/" # the base host-name & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
