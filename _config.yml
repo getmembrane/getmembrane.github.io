@@ -19,5 +19,7 @@ assets:
     - assets/stylesheets
 
 navigation:
+- text: Blog
+  url: https://medium.com/@membrane
 - text: Pricing
   url: /#pricing
