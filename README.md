@@ -6,7 +6,7 @@ Make sure you have the ruby version stated in the Gemfile installed on your loca
 
 In your console, run the following commands:
 
-    git clone git@github.com:kristofferdarj/crowdscreen.github.io.git
+    git clone git@github.com:getmembrane/getmembrane.github.io.git
     cd crowdscreen.github.io
     bundle install
     bundle exec jekyll serve
