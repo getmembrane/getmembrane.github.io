@@ -186,13 +186,19 @@
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);
+    @include flex-direction(column);
     min-height: 30vh;
     padding: 30px 0;
 }
+.description_headline {
+    @extend .headlineLarge;
+    margin-bottom: 0.2em;
+}
 .description_text {
 	font-size: $fontSize-x6;
-    margin-bottom: 0;
+    margin-bottom: 0.8em;
 	max-width: 33em;
+    text-align: center;
 }
 
 //USP
