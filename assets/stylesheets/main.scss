@@ -192,13 +192,17 @@
 }
 .description_headline {
     @extend .headlineLarge;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
 }
 .description_text {
 	font-size: $fontSize-x6;
-    margin-bottom: 0.8em;
+    margin-bottom: 1em;
 	max-width: 33em;
     text-align: center;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 //USP
