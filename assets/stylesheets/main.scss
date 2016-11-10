@@ -202,6 +202,7 @@
 .description_headline {
     @extend .headlineLarge;
     margin-bottom: 0.7em;
+    text-align: center;
 }
 .description_text {
 	font-size: $fontSize-x6;
