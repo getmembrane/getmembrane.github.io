@@ -66,9 +66,18 @@
   @include justify-content(space-between);
 }
 .logo {
+    @include flexbox();
+    @include align-items(flex-end);
+}
+.logo_symbol {
+    height: 20px;
+    margin-right: 10px;
+}
+.logo_text {
   @extend .font-text;
   color: $color-logo;
   font-weight: $fontWeight-bold;
+  line-height: 1;
   text-decoration: none;
 }
 .hero {
