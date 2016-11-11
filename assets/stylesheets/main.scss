@@ -80,6 +80,19 @@
   line-height: 1;
   text-decoration: none;
 }
+.link {
+    color: $color-link;
+
+    &:visited {
+        color: $color-linkVisited;
+    }
+    &:hover {
+        color: $color-linkHover;
+    }
+    &:active {
+        color: $color-linkActive;
+    }
+}
 .hero {
   @include flexbox();
   @include align-items(center);
@@ -157,6 +170,25 @@
 .section--tech {
   background-color: $color-techBackground;
   min-height: 40vh;
+}
+
+//404
+.section--404 {
+    @include align-items(center);
+    @include justify-content(center);
+    height: 80vh;
+}
+.inner--404 {
+    @include flexbox();
+    @include justify-content(center);
+}
+.notfound {
+    text-align: center;
+}
+.notfound_headline {
+    @extend .headlineLarge;
+}
+.notfound_description {
 }
 
 //Forms
