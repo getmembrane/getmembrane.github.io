@@ -11,12 +11,13 @@ url: "http://getmembrane.com/" # the base host-name & protocol for your site
 markdown: kramdown
 
 sass:
-    sass_dir: assets/stylesheets
+    sass_dir: assets/stylesheet
 assets:
   sources:
     - assets
     - assets/images
-    - assets/stylesheets
+    - assets/stylesheet
+    - assets/javascript
 
 navigation:
 - text: Blog
