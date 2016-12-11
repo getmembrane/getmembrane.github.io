@@ -152,37 +152,6 @@
 	}
 }
 
-@keyframes cuberoll2 {
-    $cubeside: 16px;
-
-    0% {
-        transform: rotate(0deg);
-        transform-origin: $cubeside $cubeside;
-    }
-    70%, 100% {
-        transform: rotate(90deg);
-        transform-origin: $cubeside $cubeside;
-    }
-}
-.cube {
-  background-color: $color-cube;
-  border-radius: 2px;
-  height: 16px;
-  width: 16px;
-  position: relative;
-  animation-direction: forward;;
-  animation-iteration-count: 100;
-  animation-name: cuberoll2;
-  animation-delay: 3s;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(.5, 0.02, .96, .05);
-  top: -16px;
-
-  &.is-running {
-      animation-play-state: running;
-  }
-}
-
 .section {
   @include flexbox();
   width: 100%;
@@ -456,4 +425,38 @@
     height: 18px;
     vertical-align: middle;
     width: 18px;
+}
+@keyframes cuberoll {
+    $cubeside: 16px;
+
+    0% {
+        transform: rotate(0deg);
+        transform-origin: $cubeside $cubeside;
+    }
+    70%, 100% {
+        transform: rotate(90deg);
+        transform-origin: $cubeside $cubeside;
+    }
+}
+.cube_wrapper {
+    background-color: $color-sectionBackground;
+}
+.cube {
+  background-color: $color-cube;
+  border-radius: 2px;
+  bottom: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  animation-direction: forward;;
+  animation-iteration-count: 100;
+  animation-name: cuberoll;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(.5, 0.02, .96, .05);
+  //top: -16px;
+
+  &.is-running {
+      animation-play-state: running;
+  }
 }
